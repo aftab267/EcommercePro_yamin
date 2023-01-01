@@ -21,6 +21,7 @@
                             width: 50%;
                             margin-top: 30px;
                             border: 1px solid white;
+                            color: white;
                         }
                     </style>
 
@@ -46,14 +47,19 @@
                                         </form>
 
                                     </div>
-                                  
-                                    <table class="center">
+
+                                    <table class="table center">
                                         <tr>
+                                            <td>Sl</td>
                                             <td>Category Name</td>
                                             <td>Action</td>
                                         </tr>
+                                        @php
+                                        $x=1;
+                                        @endphp
                                         @foreach($data as $da)
                                         <tr>
+                                            <td>{{ $x++ }}</td>
                                             <td>{{ $da->category_name }}</td>
                                             <td>
                                                 <a class="btn btn-success" href="">Edit</a>

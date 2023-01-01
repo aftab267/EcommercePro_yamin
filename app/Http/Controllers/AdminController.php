@@ -23,4 +23,7 @@ class AdminController extends Controller
         $data->delete();
         return redirect()->back()->with('message','Data deleted Successfully.');
     }
+    public function view_product(){
+        return view('admin.product');
+    }
 }
